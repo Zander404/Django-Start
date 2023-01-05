@@ -1,1 +1,12 @@
-{{note.note}}
+<form action="{% url 'detail' list.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>{{ List.latest_items }}</h1></legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        {% for list in list.name.all %}
+            <input type="radio" name="list" id="list{{ forloop.counter }}" value="{{ list.id }}">
+            <label for="choice{{ forloop.counter }}">{{ list.name }}</label><br>
+        {% endfor %}
+    </fieldset>
+    <input type="submit" value="Vote">
+    </form>
