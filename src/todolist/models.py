@@ -10,7 +10,7 @@ class toDo(models.Model):
     def __str__(self):
         return str(self.id) 
 
-class list(models.Model):
+class List(models.Model):
     name = models.CharField(max_length=200)
     created = models.DateTimeField("datepublished")
     note = models.TextField(max_length=450, blank=True, null=True)

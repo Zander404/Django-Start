@@ -4,5 +4,5 @@ from . import models
 
 urlpatterns = [
     path('', views.index, name="index"),
-    path("<int:list_id>/", views.info, name="info")
+    path("<int:list_id>/", views.detail, name="detail")
 ]
