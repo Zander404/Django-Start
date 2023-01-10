@@ -1,3 +1,24 @@
-<h1>Welcome to Awesome Website</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static '/img/icon2.png'%}" size="any"/>
+    
+    
+
+    <title>Document</title>
+
+</head>
+
+<body style="background-color: black;">
+    <h1>Welcome to Awesome Website</h1>
+    <img src='{% static "/img/logo2.ico" %}'>
+    
+</body>
+</html>
+
 {% block content %}
 {% endblock %}
